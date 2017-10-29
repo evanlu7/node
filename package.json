@@ -1,5 +1,5 @@
 {
-  "name": "week-10-assignment",
+  "name": "hw",
   "version": "1.0.0",
   "description": "node",
   "main": "app.js",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/evanlu7/node/issues"
   },
-  "homepage": "https://github.com/evanlu7/node#readme"
+  "homepage": "https://github.com/evanlu7/node#readme",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
 }
