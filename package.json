@@ -1,0 +1,22 @@
+{
+  "name": "week-10-assignment",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanlu7/node.git"
+  },
+  "keywords": [
+    "homework"
+  ],
+  "author": "evan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanlu7/node/issues"
+  },
+  "homepage": "https://github.com/evanlu7/node#readme"
+}
