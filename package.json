@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/evanlu7/node#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "twitter": "^1.7.1"
   }
 }
