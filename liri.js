@@ -18,6 +18,11 @@ function appSwitch() {
             omdbFunction();
             break;
 
+        case "do-what-it-says":
+            doThis();
+            break;
+
+
     }
 };
 
@@ -27,7 +32,7 @@ function twitterFunction() {
     var twitterKey = require("./keys.js");
     var client = new Twitter(twitterKey.twitterKeys);
 
-    var params = { screen_name: 'trey_bongz7', count: 20 };
+    var params = { screen_name: 'sunrider', count: 20 };
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (!error) {
 
@@ -45,7 +50,7 @@ function spotifyFunction() {
     var spotifyKey = require("./sKeys.js");
     var spotify = new Spotify(spotifyKey.spotifyKeys);
     var params = process.argv[3];
-    var customError = "oh shit ya done goofed";
+    
 
     spotify.search({ type: 'track', query: params }, function(err, data) {
         if (err) {
@@ -56,6 +61,10 @@ function spotifyFunction() {
             console.log("Song: " + data.tracks.items[0].name);
             console.log("Album: " + data.tracks.items[0].album.name);
             console.log("Preview link: " + data.tracks.items[0].preview_url);
+        
+
+
+
         }
     });
 }
@@ -80,6 +89,25 @@ function omdbFunction() {
         }
     });
 }
+
+
+function doThis () {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        if(error){
+            console.log(error);
+        }else{
+            console.log (data);
+            var dataArr = data.split(',');
+            action = dataArr [0];
+            params = dataArr [1];
+            appSwitch ();
+
+        }
+    }
+    )}
+    
+
+
 
 
 appSwitch();
