@@ -32,7 +32,7 @@ function twitterFunction() {
     var twitterKey = require("./keys.js");
     var client = new Twitter(twitterKey.twitterKeys);
 
-    var params = { screen_name: 'sunrider', count: 20 };
+    var params = { screen_name: 'Google', count: 20 };
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (!error) {
 
